@@ -1,10 +1,10 @@
-// importing necessary modules
-const router = require("express").Router();
+const express = require("express");
+const path = require("path");
+const router = express.Router();
 
-// setting the route
+// Mengarahkan "/" ke file home.html
 router.get("/", (req, res) => {
-    res.send("OSM BY RZGANS!!");
+    res.sendFile(path.join(__dirname, "../views/home.html")); // pastikan lokasi sesuai
 });
 
-// exporting the router
 module.exports = router;
