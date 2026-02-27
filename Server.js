@@ -5,6 +5,12 @@ const https = require('https');
 const fs = require('fs');
 
 // Keep the original server on port 3000
-app.listen(88, () => {
-    console.log("Original server started on port 88");
-});
+// app.listen(88, () => {
+//     console.log("Original server started on port 88");
+// });
+
+const PORT = process.env.PORT || 88;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT)
+})
